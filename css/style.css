@@ -1,0 +1,136 @@
+.nav-head{
+    width: 50px;
+    height: 100%;
+    text-align: center;
+    background-color: rgb(240, 233, 233);
+    position: fixed;
+    transition: all 0.5s;
+    z-index: 9999999999999;
+}
+.menu-btn{
+    position: absolute;
+    left: 25%;
+    top: 50%;
+    cursor: pointer;
+    
+}
+.menu-icons{
+   
+    position: absolute;
+    bottom: 20px;
+    left: 10px;
+    transform: translateY(-50%);
+    
+}
+.nav-menu{
+    position: fixed;
+    left: 0;
+    background-color: black;
+    height: 100%;
+    width: 250px;
+    z-index: 999999;
+    margin-left: -250px;
+    transition: all 0.5s;
+
+}
+
+.menu-items li{
+    opacity: 0;
+    padding-top: 500px;
+}
+.menu-items a{
+    text-decoration: none;
+    font-size: 13px;
+    color: white;
+    cursor: pointer;
+}
+.menu-items a:hover{
+    color: white;
+}
+
+.menu-social{
+    position: absolute;
+    bottom: 10px;
+    
+    
+}
+.menu-social a , p{
+    text-decoration: none;
+    font-size: 15px;
+    color: #212529;
+    margin: auto;
+    padding: 10px;
+}
+.menu-social a:hover{
+    color: #212529;
+}
+.search .form-control{
+    background-color: transparent;
+    border-radius: 0px;
+    border:none ;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.89);
+    margin-top: 25px;
+    margin-bottom: 10px;
+    color: #212529;
+    text-align: center;
+    font-weight: bold;
+    box-shadow: 0 .5rem 1rem rgba(255, 255, 255, 0.438);
+}
+
+.form-inputs .form-control{
+    background-color: transparent;
+    border-radius: 0px;
+    border:none ;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.89);
+    margin-top: 25px;
+    margin-bottom: 10px;
+    color: white;
+    text-align: center;
+    font-weight: bold;
+    box-shadow: 0 .5rem 1rem rgba(255, 255, 255, 0.438)
+}
+
+.layer {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background-color: rgba(255,255,255,.7);
+    text-align: center;
+    color: black;
+    
+    cursor: pointer;
+    transition: all 1s;
+}
+.layer h2{
+    padding-top: 10px;
+    margin-top: 10px;
+    font-size: 30px;
+    font-weight: 300;
+}
+.dtls{
+    overflow: hidden;
+    transition: all 1s;
+}
+.dtls:hover .layer{
+    top: 0;
+	transition: all 1s;
+}
+.mels{
+    overflow: hidden;
+    transition: all 1s;
+}
+.mels:hover .layer{
+    top: 0;
+	transition: all 1s;
+}
+.inge{
+    cursor: pointer;
+}
+.logo{
+    cursor: pointer;
+}
+.Area{
+    cursor: pointer;
+}

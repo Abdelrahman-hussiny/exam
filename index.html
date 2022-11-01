@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE"="edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+        <title>
+        "Abdelrahman Hussiny""exam-2"
+        </title>
+        <link rel="icon" href="imgs/Restaurant-Logo-PNG-Free-Image.png">
+        <link rel="stylesheet" href="css/style.css">
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css" integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    </head>
+    <body style="background-color: #212529;">
+<!-- navbar -->
+        <section>
+            <div class="nav-head">
+                <div class="logo py-3">
+                    <img class="logo" src="imgs/Restaurant-Logo-PNG-Free-Image.png" alt="" style="width: 48px;">
+                </div>
+                <div class="menu-btn" >
+                    <i class="open fa-solid fa-bars fs-3"></i>
+                    <i class="close fa-solid fa-xmark fs-3 d-none" style="margin-left: 5px;"></i>
+
+                </div>
+                <div class="menu-icons">
+                    <i class="fa-solid fa-globe"></i>
+                    <i class="fa-solid fa-share-nodes"></i>
+                </div>
+
+            </div>
+            <div class="nav-menu">
+                <div class="menu-items">
+                    <ul style="list-style: none;">
+                        <li class="item1" ><a data-list="search" class="nav-search">Search</a></li>
+                        <li class="item2" ><a data-list="categories" class="nav-category" onclick="categoriesData()">Categories</a></li>
+                        <li class="item3" ><a data-list="a" class="nav-area" onclick="areAData()">Area</a></li>
+                        <li class="item4" ><a data-list="i" class="nav-ingerdients" onclick="ingredientData()">Ingredients</a></li>
+                        <li class="item5" ><a data-list="contact" class="nav-contact">Contact Us</a></li>
+    
+    
+                    </ul>
+                </div>
+                <div class="menu-social text-light" >
+                    <a href=""><i class="fa-brands fa-facebook"></i></a>
+                    <a href=""><i class="fa-brands fa-twitter"></i></a>
+                    <a href=""><i class="fa-solid fa-globe"></i></a>
+                    <div class="py-1">
+                        <p>Copyright Â© 2019 All Rights Reserved.</p>
+                    </div>
+                    
+                </div>
+
+            </div>
+        </section>
+<!-- navbar ended -->
+<!-- data section and search and contact -->
+        <section>
+            <!-- search section -->
+            <div class="search container w-50 text-center py-3 d-none">
+                <div class="row">
+                    <div class="col-md-12">
+                        <input id="searchword" class="form-control bg-dark text-white" placeholder="Search By Name" >
+                    </div>
+                    <div class="col-md-12">
+                        <input id="searchletter" class="form-control bg-dark text-white" placeholder="Search By First Letter" maxlength="1">
+
+                    </div>
+
+                </div>
+            </div>
+            <!-- search end -->
+            <!-- contact section -->
+            <div class="contact container w-50 text-center d-none ">
+                <h2 class="text-white py-5">ContactUs...</h2>
+                <div class="row">
+                    <div class="form-inputs ">
+                        <div class="col-md-12">
+                            <input class="form-control bg-dark text-white" onkeyup="validate()" id="Name" placeholder="Enter Your Name" >
+                            <div class="alert mt-1 alert-danger d-none" id="namealert" role="alert">
+                                symbols and numbers not allowed
+                            </div>
+
+                        </div>
+                        <div class="col-md-12">
+                            <input class="form-control bg-dark text-white " onkeyup="validate()" id="email" placeholder="Enter Your Email">
+                            <div class="alert mt-1 alert-danger d-none" id="emailalert" role="alert">
+                                your Email must include @ -for example (@ yahoo or outlook )
+                            </div>
+
+                        </div>
+                        <div class="col-md-12">
+                            <input class="form-control bg-dark text-white" onkeyup="validate()"  id="phone" placeholder="Enter Your phone">
+                            <div class="alert mt-1 alert-danger  d-none" id="phonealert" role="alert">
+                                Enter valid Phone Number
+                            </div>
+
+                        </div>
+                        <div class="col-md-12">
+                            <input class="form-control bg-dark text-white" onkeyup="validate()" id="age" placeholder="Your Age">
+                            <div class="alert mt-1 alert-danger  d-none" id="agealert" role="alert">
+                                Enter valid Age (max age 60)
+                            </div>
+
+                        </div>
+                        <div class="col-md-12">
+                            <input type="password" class="form-control bg-dark text-white " onkeyup="validate()" id="Password" placeholder="Enter Password">
+                            <div class="alert mt-1 alert-danger  d-none" id="passwordalert" role="alert">
+                                Enter valid password (at least one letter and eight number)
+                            </div>
+
+                        </div>
+                        <div class="col-md-12">
+                            <input type="password" class="form-control bg-dark text-white " onkeyup="validate()" id="repassword" placeholder="Confirm Password">
+                            <div class="alert mt-1 alert-danger  d-none" id="repasswordalert" role="alert">
+                                This doesn't match your password
+                            </div>
+                            
+
+                        </div>
+                        <div class="py-4">
+                            <button type="submit" id="submitBtn" class="btn btn-outline-danger " disabled >Submit</button>
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+            <!-- contact end -->
+            <!-- category section -->
+            <div class="container text-center">
+                <div id="catRow" class="row">
+
+                </div>
+
+            </div>
+        </section>
+<!-- 0000000000000000000000000000 -->
+        <script src="js/jquery-3.6.1.min.js"></script>
+        <script src="js/main.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3" crossorigin="anonymous"></script>
+    </body>
+</html>
